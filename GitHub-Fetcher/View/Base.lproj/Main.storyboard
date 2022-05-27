@@ -117,7 +117,7 @@
                     <connections>
                         <outlet property="repositoryTableView" destination="6sG-p1-rlQ" id="4nA-mK-a7W"/>
                         <outlet property="searchBar" destination="xN5-yN-i33" id="NkN-uA-STZ"/>
-                        <segue destination="H0Z-jX-DxS" kind="show" id="kMw-rx-HDO"/>
+                        <segue destination="H0Z-jX-DxS" kind="show" identifier="ShowDetailSegue" id="kMw-rx-HDO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

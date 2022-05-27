@@ -30,6 +30,14 @@ class RepositoryViewController: UIViewController {
         repositoryTableView.delegate = self
         repositoryTableView.dataSource = self
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is DetailTableViewController {
+            let detailVC = segue.destination as! DetailTableViewController
+            let fullname = sender as! String
+            detailVC.repository = fullname
+        }
+    }
 }
 
 // MARK: - UITableViewDelegate
@@ -42,16 +50,22 @@ extension RepositoryViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = repositoryTableView.dequeueReusableCell(withIdentifier: repositoryCellID, for: indexPath) as! RepositoryTableViewCell
         
-        if let repositories = repositories {
+        if let repository = repositories?[indexPath.row] {
             cell.setupCell(
-                name: repositories[indexPath.row].name,
-                language: repositories[indexPath.row].language,
-                description: repositories[indexPath.row].description,
-                stars: repositories[indexPath.row].stars
+                name: repository.name,
+                language: repository.language,
+                description: repository.description,
+                stars: repository.stars
             )
         }
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let repository = repositories?[indexPath.row] {
+            performSegue(withIdentifier: "ShowDetailSegue", sender: repository.name)
+        }
     }
 }
 

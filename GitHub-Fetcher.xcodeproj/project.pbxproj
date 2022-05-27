@@ -22,6 +22,8 @@
 		7E9E835B2840CA4C002E1BBE /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E835A2840CA4C002E1BBE /* DetailTableViewController.swift */; };
 		7E9E835D2840CC87002E1BBE /* BranchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E835C2840CC87002E1BBE /* BranchTableViewCell.swift */; };
 		7E9E835F2840CC9A002E1BBE /* ContributorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E835E2840CC9A002E1BBE /* ContributorTableViewCell.swift */; };
+		7E9E83612840CEDF002E1BBE /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E83602840CEDF002E1BBE /* DetailViewModel.swift */; };
+		7E9E83632840CFA0002E1BBE /* Branch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E83622840CFA0002E1BBE /* Branch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		7E9E835A2840CA4C002E1BBE /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		7E9E835C2840CC87002E1BBE /* BranchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchTableViewCell.swift; sourceTree = "<group>"; };
 		7E9E835E2840CC9A002E1BBE /* ContributorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorTableViewCell.swift; sourceTree = "<group>"; };
+		7E9E83602840CEDF002E1BBE /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		7E9E83622840CFA0002E1BBE /* Branch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Branch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				7E9E83562840BC3F002E1BBE /* RepositoryViewModel.swift */,
+				7E9E83602840CEDF002E1BBE /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				7E9E834F2840B839002E1BBE /* Repositories.swift */,
+				7E9E83622840CFA0002E1BBE /* Branch.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -216,7 +222,9 @@
 				7E9E835D2840CC87002E1BBE /* BranchTableViewCell.swift in Sources */,
 				7E9E835B2840CA4C002E1BBE /* DetailTableViewController.swift in Sources */,
 				7E9E83352840AC60002E1BBE /* AppDelegate.swift in Sources */,
+				7E9E83632840CFA0002E1BBE /* Branch.swift in Sources */,
 				7E9E83552840BB2A002E1BBE /* MyService.swift in Sources */,
+				7E9E83612840CEDF002E1BBE /* DetailViewModel.swift in Sources */,
 				7E9E835F2840CC9A002E1BBE /* ContributorTableViewCell.swift in Sources */,
 				7E9E83592840BD04002E1BBE /* ApiError.swift in Sources */,
 				7E9E83372840AC60002E1BBE /* SceneDelegate.swift in Sources */,
