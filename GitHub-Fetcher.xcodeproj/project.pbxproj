@@ -16,6 +16,7 @@
 		7E9E834E2840B04F002E1BBE /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E834D2840B04F002E1BBE /* RepositoryTableViewCell.swift */; };
 		7E9E83502840B839002E1BBE /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E834F2840B839002E1BBE /* Repositories.swift */; };
 		7E9E83532840BA91002E1BBE /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 7E9E83522840BA91002E1BBE /* Moya */; };
+		7E9E83552840BB2A002E1BBE /* MyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E83542840BB2A002E1BBE /* MyService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		7E9E83422840AC61002E1BBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E9E834D2840B04F002E1BBE /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
 		7E9E834F2840B839002E1BBE /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
+		7E9E83542840BB2A002E1BBE /* MyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		7E9E83482840AC79002E1BBE /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				7E9E83542840BB2A002E1BBE /* MyService.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				7E9E83392840AC60002E1BBE /* RepositoryViewController.swift in Sources */,
 				7E9E83502840B839002E1BBE /* Repositories.swift in Sources */,
 				7E9E83352840AC60002E1BBE /* AppDelegate.swift in Sources */,
+				7E9E83552840BB2A002E1BBE /* MyService.swift in Sources */,
 				7E9E83372840AC60002E1BBE /* SceneDelegate.swift in Sources */,
 				7E9E834E2840B04F002E1BBE /* RepositoryTableViewCell.swift in Sources */,
 			);
