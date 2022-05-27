@@ -51,12 +51,7 @@ extension RepositoryViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = repositoryTableView.dequeueReusableCell(withIdentifier: repositoryCellID, for: indexPath) as! RepositoryTableViewCell
         
         if let repository = repositories?[indexPath.row] {
-            cell.setupCell(
-                name: repository.name,
-                language: repository.language,
-                description: repository.description,
-                stars: repository.stars
-            )
+            cell.setupCell(repository: repository)
         }
         
         return cell

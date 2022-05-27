@@ -16,6 +16,7 @@ class DetailTableViewController: UITableViewController {
 
     var repository: String!
     var branches: [Branch]?
+    var contributors: [Contributor]?
 
     // MARK: - Life Cycle
 
@@ -23,6 +24,7 @@ class DetailTableViewController: UITableViewController {
         super.viewDidLoad()
 
         loadBranch()
+        loadContributor()
     }
 
     // MARK: - Private Func
@@ -30,14 +32,16 @@ class DetailTableViewController: UITableViewController {
     private func loadBranch() {
         viewModel.fetchBranch(for: repository) { branches, error in
             DispatchQueue.main.async {
-                if error != nil, error == .rateLimit {
-                    let alert = UIAlertController(title: "⚠️ Warning", message: "API rate limit exceeded.", preferredStyle: .alert)
-                    let action = UIAlertAction(title: "OK", style: .cancel)
-                    alert.addAction(action)
-                    self.present(alert, animated: true)
-                }
-
                 self.branches = branches
+                self.tableView.reloadData()
+            }
+        }
+    }
+
+    private func loadContributor() {
+        viewModel.fetchContributor(for: repository) { contributors, error in
+            DispatchQueue.main.async {
+                self.contributors = contributors
                 self.tableView.reloadData()
             }
         }
@@ -52,14 +56,27 @@ extension DetailTableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return branches?.count ?? 0
+        if section == 0 {
+            return branches?.count ?? 0
+        }
+        return contributors?.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: branchCellID, for: indexPath) as! BranchTableViewCell
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: branchCellID, for: indexPath) as! BranchTableViewCell
 
-        if let branch = branches?[indexPath.row] {
-            cell.setupCell(name: branch.name)
+            if let branch = branches?[indexPath.row] {
+                cell.setupCell(name: branch.name)
+            }
+
+            return cell
+        }
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: contributorCellID, for: indexPath) as! ContributorTableViewCell
+
+        if let contributor = contributors?[indexPath.row] {
+            cell.setupCell(contributor: contributor)
         }
 
         return cell
