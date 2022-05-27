@@ -12,10 +12,30 @@ class RepositoryViewController: UIViewController {
     
     let repositoryCellID = "RepositoryCellIdentifier"
     
+    // MARK: - IBOutlet
+    
+    @IBOutlet var repositoryTableView: UITableView!
+    
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        repositoryTableView.delegate = self
+        repositoryTableView.dataSource = self
     }
 }
 
+// MARK: - UITableViewDelegate
+
+extension RepositoryViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = repositoryTableView.dequeueReusableCell(withIdentifier: repositoryCellID, for: indexPath) as! RepositoryTableViewCell
+        cell.setupCell(name: "Setup/TV", language: "Swift", description: "Setup repository table view", stars: 100)
+        return cell
+    }
+}

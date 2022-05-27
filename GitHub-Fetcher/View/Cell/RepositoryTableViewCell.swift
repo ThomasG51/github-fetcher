@@ -17,6 +17,6 @@ class RepositoryTableViewCell: UITableViewCell {
         self.name.text = name
         self.language.text = language
         self.repoDescription.text = description
-        self.stars.text = String(stars)
+        self.stars.text = "⭐️ \(stars)"
     }
 }
