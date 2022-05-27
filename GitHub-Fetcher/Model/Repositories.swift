@@ -20,8 +20,8 @@ struct Repositories: Codable {
 
         let id: Int
         let name: String
-        let description: String
-        let language: String
+        let description: String?
+        let language: String?
         let stars: Int
     }
 }

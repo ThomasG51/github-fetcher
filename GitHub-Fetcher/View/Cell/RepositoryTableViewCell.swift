@@ -13,10 +13,10 @@ class RepositoryTableViewCell: UITableViewCell {
     @IBOutlet var repoDescription: UILabel!
     @IBOutlet var stars: UILabel!
 
-    func setupCell(name: String, language: String, description: String, stars: Int) {
+    func setupCell(name: String, language: String?, description: String?, stars: Int) {
         self.name.text = name
-        self.language.text = language
-        self.repoDescription.text = description
+        self.language.text = language ?? ""
+        self.repoDescription.text = description ?? "No description"
         self.stars.text = "⭐️ \(stars)"
     }
 }
