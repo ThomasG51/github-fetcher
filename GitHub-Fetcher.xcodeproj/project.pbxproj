@@ -24,6 +24,8 @@
 		7E9E835F2840CC9A002E1BBE /* ContributorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E835E2840CC9A002E1BBE /* ContributorTableViewCell.swift */; };
 		7E9E83612840CEDF002E1BBE /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E83602840CEDF002E1BBE /* DetailViewModel.swift */; };
 		7E9E83632840CFA0002E1BBE /* Branch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E83622840CFA0002E1BBE /* Branch.swift */; };
+		7E9E83652840D4BD002E1BBE /* Contributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E83642840D4BD002E1BBE /* Contributor.swift */; };
+		7E9E83672840D60F002E1BBE /* UIImageView+load.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E83662840D60F002E1BBE /* UIImageView+load.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
