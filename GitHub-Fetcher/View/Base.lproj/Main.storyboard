@@ -23,18 +23,18 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6sG-p1-rlQ">
                                 <rect key="frame" x="0.0" y="139" width="414" height="757"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RepositoryCellIdentifier" rowHeight="89" id="Y6I-NI-AaF" customClass="RepositoryTableViewCell" customModule="GitHub_Fetcher" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="49.5" width="374" height="89"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RepositoryCellIdentifier" id="Y6I-NI-AaF" customClass="RepositoryTableViewCell" customModule="GitHub_Fetcher" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="49.5" width="374" height="67.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y6I-NI-AaF" id="5oQ-qa-hAh">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="89"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="67.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vPG-O0-gX1">
-                                                    <rect key="frame" x="30" y="23" width="314" height="45"/>
+                                                    <rect key="frame" x="20" y="11" width="334" height="45.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="D6G-0B-ER9">
-                                                            <rect key="frame" x="0.0" y="0.0" width="314" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="334" height="20.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repo/Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEn-D4-pTU">
                                                                     <rect key="frame" x="0.0" y="0.0" width="89" height="20.5"/>
@@ -43,7 +43,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLP-gc-GSX">
-                                                                    <rect key="frame" x="285" y="0.0" width="29" height="20.5"/>
+                                                                    <rect key="frame" x="305" y="0.0" width="29" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                     <color key="textColor" systemColor="systemGrayColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -51,7 +51,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="sCc-ux-UMJ">
-                                                            <rect key="frame" x="0.0" y="30.5" width="314" height="14.5"/>
+                                                            <rect key="frame" x="0.0" y="31" width="334" height="14.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repository description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWD-al-KRA">
                                                                     <rect key="frame" x="0.0" y="0.0" width="128" height="14.5"/>
@@ -60,7 +60,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⭐️ 100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pR1-dN-4pW">
-                                                                    <rect key="frame" x="272.5" y="0.0" width="41.5" height="14.5"/>
+                                                                    <rect key="frame" x="292.5" y="0.0" width="41.5" height="14.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                     <color key="textColor" systemColor="systemGrayColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -79,9 +79,10 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="vPG-O0-gX1" firstAttribute="leading" secondItem="5oQ-qa-hAh" secondAttribute="leadingMargin" constant="10" id="uEd-kk-Kqk"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="vPG-O0-gX1" secondAttribute="bottom" constant="10" id="vTB-T8-0mG"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="vPG-O0-gX1" secondAttribute="trailing" constant="10" id="zO1-Fe-R9L"/>
+                                                <constraint firstItem="vPG-O0-gX1" firstAttribute="top" secondItem="5oQ-qa-hAh" secondAttribute="topMargin" id="aRB-ze-ORA"/>
+                                                <constraint firstItem="vPG-O0-gX1" firstAttribute="leading" secondItem="5oQ-qa-hAh" secondAttribute="leadingMargin" id="uEd-kk-Kqk"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="vPG-O0-gX1" secondAttribute="bottom" id="vTB-T8-0mG"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="vPG-O0-gX1" secondAttribute="trailing" id="zO1-Fe-R9L"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -107,6 +108,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="GitHub Fetcher" id="nsJ-lh-Fc0"/>
+                    <connections>
+                        <outlet property="repositoryTableView" destination="6sG-p1-rlQ" id="4nA-mK-a7W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
