@@ -110,6 +110,7 @@
                     <navigationItem key="navigationItem" title="GitHub Fetcher" id="nsJ-lh-Fc0"/>
                     <connections>
                         <outlet property="repositoryTableView" destination="6sG-p1-rlQ" id="4nA-mK-a7W"/>
+                        <outlet property="searchBar" destination="xN5-yN-i33" id="NkN-uA-STZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
