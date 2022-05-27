@@ -14,6 +14,7 @@
 		7E9E833E2840AC61002E1BBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E9E833D2840AC61002E1BBE /* Assets.xcassets */; };
 		7E9E83412840AC61002E1BBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E9E833F2840AC61002E1BBE /* LaunchScreen.storyboard */; };
 		7E9E834E2840B04F002E1BBE /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E834D2840B04F002E1BBE /* RepositoryTableViewCell.swift */; };
+		7E9E83502840B839002E1BBE /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E834F2840B839002E1BBE /* Repositories.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		7E9E83402840AC61002E1BBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E9E83422840AC61002E1BBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E9E834D2840B04F002E1BBE /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
+		7E9E834F2840B839002E1BBE /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		7E9E834B2840AC98002E1BBE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7E9E834F2840B839002E1BBE /* Repositories.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E9E83392840AC60002E1BBE /* RepositoryViewController.swift in Sources */,
+				7E9E83502840B839002E1BBE /* Repositories.swift in Sources */,
 				7E9E83352840AC60002E1BBE /* AppDelegate.swift in Sources */,
 				7E9E83372840AC60002E1BBE /* SceneDelegate.swift in Sources */,
 				7E9E834E2840B04F002E1BBE /* RepositoryTableViewCell.swift in Sources */,
