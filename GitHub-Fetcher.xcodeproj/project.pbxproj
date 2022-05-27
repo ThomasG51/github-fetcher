@@ -15,6 +15,7 @@
 		7E9E83412840AC61002E1BBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E9E833F2840AC61002E1BBE /* LaunchScreen.storyboard */; };
 		7E9E834E2840B04F002E1BBE /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E834D2840B04F002E1BBE /* RepositoryTableViewCell.swift */; };
 		7E9E83502840B839002E1BBE /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E834F2840B839002E1BBE /* Repositories.swift */; };
+		7E9E83532840BA91002E1BBE /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 7E9E83522840BA91002E1BBE /* Moya */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E9E83532840BA91002E1BBE /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +131,9 @@
 			dependencies = (
 			);
 			name = "GitHub-Fetcher";
+			packageProductDependencies = (
+				7E9E83522840BA91002E1BBE /* Moya */,
+			);
 			productName = "GitHub-Fetcher";
 			productReference = 7E9E83312840AC60002E1BBE /* GitHub-Fetcher.app */;
 			productType = "com.apple.product-type.application";
@@ -157,6 +162,9 @@
 				Base,
 			);
 			mainGroup = 7E9E83282840AC60002E1BBE;
+			packageReferences = (
+				7E9E83512840BA91002E1BBE /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = 7E9E83322840AC60002E1BBE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -406,6 +414,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7E9E83512840BA91002E1BBE /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7E9E83522840BA91002E1BBE /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E9E83512840BA91002E1BBE /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7E9E83292840AC60002E1BBE /* Project object */;
 }
