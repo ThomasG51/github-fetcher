@@ -6,22 +6,25 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct Repositories: Codable {
-    let items: [Repository]
-    struct Repository: Codable {
-        enum CodingKeys: String, CodingKey {
-            case id
-            case name = "full_name"
-            case description
-            case language
-            case stars = "stargazers_count"
-        }
+class Repositories: Object, ObjectKeyIdentifiable, Codable {
+    @Persisted(primaryKey: true) var id: Int? = 1
+    @Persisted var items: List<Repository>
+}
 
-        let id: Int
-        let name: String
-        let description: String?
-        let language: String?
-        let stars: Int
+class Repository: EmbeddedObject, ObjectKeyIdentifiable, Codable {
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name = "full_name"
+        case repoDescription = "description"
+        case language
+        case stars = "stargazers_count"
     }
+
+    @Persisted var id: Int
+    @Persisted var name: String
+    @Persisted var repoDescription: String?
+    @Persisted var language: String?
+    @Persisted var stars: Int
 }
