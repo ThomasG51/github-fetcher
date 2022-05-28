@@ -9,6 +9,12 @@ import Foundation
 import Moya
 
 class DetailViewModel {
+    /**
+     Fetch branch data from GitHub API
+     - Parameters:
+        - repository: Repository name.
+        - completion: A completion block that returns an optional `[Branch]` and an optional `ApiError`.
+     */
     func fetchBranch(for repository: String, completion: @escaping ([Branch]?, ApiError?) -> Void) {
         let provider = MoyaProvider<MyService>()
         provider.request(.fetchBranch(repository: repository)) { result in
@@ -35,6 +41,12 @@ class DetailViewModel {
         }
     }
 
+    /**
+     Fetch contributors data from GitHub API
+     - Parameters:
+        - repository: Repository name.
+        - completion: A completion block that returns an optional `[Contributor]` and an optional `ApiError`.
+     */
     func fetchContributor(for repository: String, completion: @escaping ([Contributor]?, ApiError?) -> Void) {
         let provider = MoyaProvider<MyService>()
         provider.request(.fetchContributor(repository: repository)) { result in

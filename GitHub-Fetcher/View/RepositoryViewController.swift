@@ -13,7 +13,7 @@ class RepositoryViewController: UIViewController {
     let repositoryCellID = "RepositoryCellIdentifier"
     let viewModel = RepositoryViewModel()
     
-    var repositories: [Repositories.Repository]?
+    var repositories: Repositories?
     
     // MARK: - IBOutlet
     
@@ -29,6 +29,10 @@ class RepositoryViewController: UIViewController {
         
         repositoryTableView.delegate = self
         repositoryTableView.dataSource = self
+        
+        viewModel.loadRealmObject { repositories in
+            self.repositories = repositories
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -44,13 +48,13 @@ class RepositoryViewController: UIViewController {
 
 extension RepositoryViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return repositories?.count ?? 0
+        return repositories?.items.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = repositoryTableView.dequeueReusableCell(withIdentifier: repositoryCellID, for: indexPath) as! RepositoryTableViewCell
         
-        if let repository = repositories?[indexPath.row] {
+        if let repository = repositories?.items[indexPath.row] {
             cell.setupCell(repository: repository)
         }
         
@@ -58,7 +62,7 @@ extension RepositoryViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let repository = repositories?[indexPath.row] {
+        if let repository = repositories?.items[indexPath.row] {
             performSegue(withIdentifier: "ShowDetailSegue", sender: repository.name)
         }
     }
@@ -78,7 +82,7 @@ extension RepositoryViewController: UISearchBarDelegate {
                     self.present(alert, animated: true)
                 }
                 
-                self.repositories = repositories?.items
+                self.repositories = repositories
                 self.repositoryTableView.reloadData()
             }
         }
