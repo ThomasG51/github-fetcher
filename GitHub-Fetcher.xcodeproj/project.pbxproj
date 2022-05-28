@@ -26,6 +26,8 @@
 		7E9E83632840CFA0002E1BBE /* Branch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E83622840CFA0002E1BBE /* Branch.swift */; };
 		7E9E83652840D4BD002E1BBE /* Contributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E83642840D4BD002E1BBE /* Contributor.swift */; };
 		7E9E83672840D60F002E1BBE /* UIImageView+load.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9E83662840D60F002E1BBE /* UIImageView+load.swift */; };
+		7E9E83932842247B002E1BBE /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 7E9E83922842247B002E1BBE /* Realm */; };
+		7E9E83952842247B002E1BBE /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7E9E83942842247B002E1BBE /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E9E83952842247B002E1BBE /* RealmSwift in Frameworks */,
+				7E9E83932842247B002E1BBE /* Realm in Frameworks */,
 				7E9E83532840BA91002E1BBE /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -163,6 +167,8 @@
 			name = "GitHub-Fetcher";
 			packageProductDependencies = (
 				7E9E83522840BA91002E1BBE /* Moya */,
+				7E9E83922842247B002E1BBE /* Realm */,
+				7E9E83942842247B002E1BBE /* RealmSwift */,
 			);
 			productName = "GitHub-Fetcher";
 			productReference = 7E9E83312840AC60002E1BBE /* GitHub-Fetcher.app */;
@@ -194,6 +200,7 @@
 			mainGroup = 7E9E83282840AC60002E1BBE;
 			packageReferences = (
 				7E9E83512840BA91002E1BBE /* XCRemoteSwiftPackageReference "Moya" */,
+				7E9E83912842247B002E1BBE /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 7E9E83322840AC60002E1BBE /* Products */;
 			projectDirPath = "";
@@ -464,6 +471,14 @@
 				kind = branch;
 			};
 		};
+		7E9E83912842247B002E1BBE /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -471,6 +486,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7E9E83512840BA91002E1BBE /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
+		};
+		7E9E83922842247B002E1BBE /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E9E83912842247B002E1BBE /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		7E9E83942842247B002E1BBE /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E9E83912842247B002E1BBE /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
